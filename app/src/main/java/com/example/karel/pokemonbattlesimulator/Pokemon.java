@@ -126,12 +126,12 @@ public class Pokemon {
         Drawable kakunaFront = res.getDrawable(R.drawable.kakuna_front);
         Drawable kakunaBack = res.getDrawable(R.drawable.kakuna_back);
         Move[] kakunaMoves;
-        Stats kakunaStats;
+        Stats kakunaStats = new Stats(1, 45, 25, 50, 25, 25, 35);
 	/*14*/	new Pokemon("Kakuna", 10, "bug", "poison", kakunaMoves, kakunaStats, 45, kakunaFront, kakunaBack);
         Drawable beedrillFront = res.getDrawable(R.drawable.beedrill_front);
         Drawable beedrillBack = res.getDrawable(R.drawable.beedrill_back);
         Move[] beedrillMoves;
-        Stats beedrillStats;
+        Stats beedrillStats = new Stats(1, );
 	/*15*/	new Pokemon("Beedrill", 29.5, "bug", "poison", beedrillMoves, beedrillStats, 65, beedrillFront, beedrillBack);
         Drawable pidgeyFront = res.getDrawable(R.drawable.pidgey_front);
         Drawable pidgeyBack = res.getDrawable(R.drawable.pidgey_back);
