@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_above="@+id/button3"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_toStartOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button1"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button1"
+        android:text="TextView"
+        android:layout_toLeftOf="@+id/button1"
+        android:layout_toStartOf="@+id/button1"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/pokemon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="74dp"
+        android:layout_marginStart="74dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/pokemon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_above="@+id/progressBar2"
+        android:layout_alignLeft="@+id/progressBar2"
+        android:layout_alignStart="@+id/progressBar2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pokemon1"
+        android:layout_alignStart="@+id/pokemon1"
+        android:layout_below="@+id/pokemon1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:color = "#FFFFFF"
+        android:layout_above="@+id/pokemon1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="28dp" />
+
+    <ImageView
+        android:id="@+id/enemyPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pidgey_front"
+        android:layout_above="@+id/progressBar2"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp" />
+
+    <ImageView
+        android:id="@+id/yourPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        app:srcCompat="@drawable/pidgeotto_back"
+        android:layout_alignBottom="@+id/progressBar"
+        android:layout_toRightOf="@+id/pokemon1"
+        android:layout_toEndOf="@+id/pokemon1"
+        android:layout_below="@+id/pokemon2" />
+
+
+</RelativeLayout>
