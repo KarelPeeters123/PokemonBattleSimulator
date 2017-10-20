@@ -14,7 +14,9 @@ public class Turn {
         this.move1 = move1;
         this.move2 = move2;
         if(myBattle.pokemon1.myStats.spd >= myBattle.pokemon2.myStats.spd) {
-            myBattle.attack(myBattle.pokemon1, myBattle.pokemon2, move1);
+            if (Math.random() <= 0.25 && myBattle.pokemon1.myStatus.isParalized()) {
+                myBattle.attack(myBattle.pokemon1, myBattle.pokemon2, move1);
+            }
             myBattle.attack(myBattle.pokemon2, myBattle.pokemon1, move2);
         } else {
             myBattle.attack(myBattle.pokemon2, myBattle.pokemon1, move2);

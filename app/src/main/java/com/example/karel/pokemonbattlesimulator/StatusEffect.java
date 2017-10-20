@@ -83,8 +83,11 @@ public class StatusEffect {
         if (!hasNonVolatileEffect) {
             isSleeping = sleeping;
             setSleepCounter(3);
-            setNonVolatileEffect(true);
+            setNonVolatileEffect(sleeping);
             if (getSleepCounter() <= 0);
+        }
+        if (sleeping == false){
+            isSleeping = sleeping;
         }
     }
 
@@ -95,35 +98,50 @@ public class StatusEffect {
     public void setParalized(boolean paralized) {
         if (!hasNonVolatileEffect) {
             isParalized = paralized;
-            setNonVolatileEffect(true);
+            setNonVolatileEffect(paralized);
+        }
+        if (paralized == false){
+            isParalized = paralized;
         }
     }
 
     public void setPoisoned(boolean poisoned) {
         if (!hasNonVolatileEffect) {
             isPoisoned = poisoned;
-            setNonVolatileEffect(true);
+            setNonVolatileEffect(poisoned);
+        }
+        if (poisoned == false){
+            isPoisoned = poisoned;
         }
     }
 
     public void setBadlyPoisoned(boolean badlyPoisoned) {
         if (!hasNonVolatileEffect) {
             isBadlyPoisoned = badlyPoisoned;
-            setNonVolatileEffect(true);
+            setNonVolatileEffect(badlyPoisoned);
+        }
+        if (badlyPoisoned == false){
+            isBadlyPoisoned = badlyPoisoned;
         }
     }
 
     public void setBurned(boolean burned) {
         if (!hasNonVolatileEffect) {
             isBurned = burned;
-            setNonVolatileEffect(true);
+            setNonVolatileEffect(burned);
+        }
+        if (burned == false){
+            isBurned = burned;
         }
     }
 
     public void setFrozen(boolean frozen) {
         if (!hasNonVolatileEffect) {
             isFrozen = frozen;
-            setNonVolatileEffect(true);
+            setNonVolatileEffect(frozen);
+        }
+        if (frozen == false){
+            isFrozen = frozen;
         }
     }
 

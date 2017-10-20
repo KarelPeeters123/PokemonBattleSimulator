@@ -18,8 +18,8 @@ public class Move {
     int amountHits;
 
     public Move(String moveName, boolean isSpecial, int baseDamage, double accuracy, Type type,
-                String statReductionStat, int statReductionValue, String buffTarget, double statReductionAcc,
-                double healratio, int amountHits) {
+                String statReductionStat, int statReductionValue, String buffTarget,
+                double statReductionAcc, double healratio, int amountHits) {
         this.moveName = moveName; //name
         this.isSpecial = isSpecial; // true if the damage scales with Special attack rather than physical
         this.baseDamage = baseDamage; //base damage
