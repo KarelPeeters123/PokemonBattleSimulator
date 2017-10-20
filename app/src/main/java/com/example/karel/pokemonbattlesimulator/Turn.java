@@ -20,6 +20,10 @@ public class Turn {
             myBattle.attack(myBattle.pokemon2, myBattle.pokemon1, move2);
             myBattle.attack(myBattle.pokemon1, myBattle.pokemon2, move1);
         }
+        myBattle.pokemon1.myStatus.setFlinched(false);
+        myBattle.pokemon2.myStatus.setFlinched(false);
+        myBattle.pokemon1.myStatus.setSleepCounter(myBattle.pokemon1.myStatus.getSleepCounter() - 1);
+        myBattle.pokemon1.myStatus.setSleepCounter(myBattle.pokemon2.myStatus.getSleepCounter() - 1);
         //add end of turn effects (i.e. poison, statreduction)
     }
 }

@@ -21,6 +21,7 @@ public class Pokemon {
     boolean isFainted = false;
     Drawable frontSprite;
     Drawable backSprite;
+    StatusEffect myStatus;
 
     public Pokemon(String name, double weight,  Type type1, Type type2, Move[] moves,
                    Stats myStats, Drawable front, Drawable back) {
