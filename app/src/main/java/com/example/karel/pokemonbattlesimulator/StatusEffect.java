@@ -5,25 +5,19 @@ package com.example.karel.pokemonbattlesimulator;
  */
 
 public class StatusEffect {
-    Pokemon myPokemon;
     private boolean isParalized;
     private boolean isPoisoned;
     private boolean isBadlyPoisoned;
     private boolean isBurned;
     private boolean isFrozen;
-
     private boolean isFlinched;
     private boolean isConfused;
     private boolean isInfatuated;
     private boolean isSleeping;
-    private boolean isBound;
-
 
     private boolean hasNonVolatileEffect;
 
     private int sleepCounter;
-    private int badlyPoisonedCounter;
-    private int bindCounter;
 
     public StatusEffect() {
         isParalized = false;
@@ -39,29 +33,6 @@ public class StatusEffect {
         hasNonVolatileEffect = false;
 
         sleepCounter = 0;
-        badlyPoisonedCounter = 0;
-        bindCounter =  0;
-
-    }
-
-    public boolean isBound() {
-        return isBound;
-    }
-
-    public void setBound(boolean bound) {
-        isBound = bound;
-        bindCounter = (int)(2 + Math.random()*4);
-    }
-
-    public int getBindCounter() {
-        return bindCounter;
-    }
-
-    public void setBindCounter(int bindCounter) {
-        this.bindCounter = bindCounter;
-        if (this.bindCounter <= 0){
-            this.bindCounter = 0;
-        }
     }
 
     public boolean isParalized() {
@@ -100,7 +71,6 @@ public class StatusEffect {
         return isSleeping;
     }
 
-
     public boolean isHasNonVolatileEffect() {
         return hasNonVolatileEffect;
     }
@@ -123,27 +93,12 @@ public class StatusEffect {
 
     public void setSleepCounter(int sleepCounter) {
         this.sleepCounter = sleepCounter;
-        if (this.sleepCounter <= 0){
-            this.sleepCounter = 0;
-        }
-    }
-
-    public void setBadlyPoisonedCounter(int badlyPoisonedCounter) {
-        this.badlyPoisonedCounter = badlyPoisonedCounter;
-        if (this.badlyPoisonedCounter <= 0){
-            this.badlyPoisonedCounter = 0;
-        }
-    }
-
-    public int getBadlyPoisonedCounter() {
-        return badlyPoisonedCounter;
     }
 
     public void setParalized(boolean paralized) {
         if (!hasNonVolatileEffect) {
             isParalized = paralized;
             setNonVolatileEffect(paralized);
-            myPokemon.myStats.setSpd((int)(0.75*myPokemon.myStats.spd));
         }
         if (paralized == false){
             isParalized = paralized;

@@ -29,7 +29,7 @@ public class Move {
         this.statReductionValue = statReductionValue; // amount of stages this stat is altered
         this.buffTarget = buffTarget; //the target for the stat altering. either "self" or "enemy"
         this.statReductionAcc = statReductionAcc; //accuracy of the stat altering component to hit
-        this.healratio = healratio; // % of the damage that is healed
+        this.healratio = healratio; // % of the damge that is healed
         this.amountHits = amountHits; // amount of times this moves hits
 
     }

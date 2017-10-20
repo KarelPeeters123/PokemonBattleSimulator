@@ -35,7 +35,6 @@ public class Pokemon {
         this.myStats = myStats;
         this.frontSprite = front;
         this.backSprite = back;
-        this.myStatus.myPokemon = this;
     }
 
     public void setLevel(int newLevel){
