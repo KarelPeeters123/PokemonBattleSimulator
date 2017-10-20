@@ -47,54 +47,15 @@ public class Battle {
             decimalDamage = 0;
         }
         int damage = (int) decimalDamage;
-        defender.myStats.setHp(defender.myStats.hp - damage);
-        if (myMove.statReductionStat.equals("atk")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setAtk((myMove.statReductionValue + 2)/2);
-            } else {
-                defender.myStats.setAtk(2/(myMove.statReductionValue + 2));
-            }
+        for (int i = 0; i < myMove.amountHits; i++) {
+            defender.myStats.setHp(defender.myStats.hp - damage);
+            attacker.myStats.setHp(attacker.myStats.hp + ((int) (decimalDamage * myMove.healratio)));
         }
-        if (myMove.statReductionStat.equals("def")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setDef((myMove.statReductionValue + 2)/2);
+        if (Math.random() <= myMove.statReductionAcc) {
+            if (myMove.buffTarget.equals("enemy")) {
+                defender.myStats.setMultiplier(myMove.statReductionValue, myMove.statReductionStat);
             } else {
-                defender.myStats.setDef(2/(myMove.statReductionValue + 2));
-            }
-        }
-        if (myMove.statReductionStat.equals("spAtk")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setSpAtk((myMove.statReductionValue + 2)/2);
-            } else {
-                defender.myStats.setSpAtk(2/(myMove.statReductionValue + 2));
-            }
-        }
-        if (myMove.statReductionStat.equals("spDef")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setSpDef((myMove.statReductionValue + 2)/2);
-            } else {
-                defender.myStats.setSpDef(2/(myMove.statReductionValue + 2));
-            }
-        }
-        if (myMove.statReductionStat.equals("spd")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setSpd((myMove.statReductionValue + 2)/2);
-            } else {
-                defender.myStats.setSpd(2/(myMove.statReductionValue + 2));
-            }
-        }
-        if (myMove.statReductionStat.equals("acc")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setAcc((myMove.statReductionValue + 3)/3);
-            } else {
-                defender.myStats.setAcc(3/(myMove.statReductionValue + 3));
-            }
-        }
-        if (myMove.statReductionStat.equals("eva")){
-            if (myMove.statReductionValue >= 0) {
-                defender.myStats.setEva((myMove.statReductionValue + 3)/3);
-            } else {
-                defender.myStats.setEva(3/(myMove.statReductionValue + 3));
+                attacker.myStats.setMultiplier(myMove.statReductionValue, myMove.statReductionStat);
             }
         }
     }
