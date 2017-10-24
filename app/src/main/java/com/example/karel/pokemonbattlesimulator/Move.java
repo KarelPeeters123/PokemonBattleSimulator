@@ -16,7 +16,6 @@ public class Move {
     double statReductionAcc;
     double healratio;
     int amountHits;
-    int test;
 
     public Move(String moveName, boolean isSpecial, int baseDamage, double accuracy, Type type,
                 String statReductionStat, int statReductionValue, String buffTarget,

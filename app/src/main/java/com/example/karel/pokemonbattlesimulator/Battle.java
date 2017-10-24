@@ -50,6 +50,7 @@ public class Battle {
         for (int i = 0; i < myMove.amountHits; i++) {
             defender.myStats.setHp(defender.myStats.hp - damage);
             attacker.myStats.setHp(attacker.myStats.hp + ((int) (decimalDamage * myMove.healratio)));
+            defender.myStatus.setFrozen(false);
         }
         if (Math.random() <= myMove.statReductionAcc) {
             if (myMove.buffTarget.equals("enemy")) {
