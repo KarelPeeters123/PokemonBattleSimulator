@@ -19,7 +19,7 @@ public class Move {
 
     public Move(String moveName, boolean isSpecial, int baseDamage, double accuracy, Type type,
                 String statReductionStat, int statReductionValue, String buffTarget,
-                double statReductionAcc, double healratio, int amountHits) {
+                double statReductionAcc, double healratio, int amountHits, String statusEffect) {
         this.moveName = moveName; //name
         this.isSpecial = isSpecial; // true if the damage scales with Special attack rather than physical
         this.baseDamage = baseDamage; //base damage
@@ -56,18 +56,18 @@ public class Move {
         Type fairy =  new Type("fairy");
         Type noType = new Type("");
 
-        Move absorb = new Move("Absorb", true, 20, 100, grass, "atk", 0, "self", 1.0, 0.5, 1);
-        Move acid = new Move("Acid", true, 40, 100, poison, "spDef", -1, "enemy", 0.1, 0, 1);
-        Move acidArmor =  new Move("Acid Armor", true, 0, 100, poison, "def", 2, "self", 1.0, 0, 1);
-        Move agility = new Move("Agility", true, 0, 100, psychic, "spd", 2, "self", 1.0, 0, 1);
-        Move amnesia = new Move("Amnesia", true, 0, 100, psychic, "spDef", 2, "self", 1.0, 0, 1);
-        Move auroraBeam = new Move("Aurora Beam", true, 65, 100, ice, "atk", -1, "enemy", 0.1, 0, 1);
-        Move barrage = new Move("Barrage", false, 15, 85, normal, "atk", 0, "self", 1.0, 0, 2 + (int)(Math.random()*4));
+        Move absorb = new Move("Absorb", true, 20, 100, grass, "atk", 0, "self", 1.0, 0.5, 1, "");
+        Move acid = new Move("Acid", true, 40, 100, poison, "spDef", -1, "enemy", 0.1, 0, 1, "");
+        Move acidArmor =  new Move("Acid Armor", true, 0, 100, poison, "def", 2, "self", 1.0, 0, 1, "");
+        Move agility = new Move("Agility", true, 0, 100, psychic, "spd", 2, "self", 1.0, 0, 1, "");
+        Move amnesia = new Move("Amnesia", true, 0, 100, psychic, "spDef", 2, "self", 1.0, 0, 1, "");
+        Move auroraBeam = new Move("Aurora Beam", true, 65, 100, ice, "atk", -1, "enemy", 0.1, 0, 1, "");
+        Move barrage = new Move("Barrage", false, 15, 85, normal, "atk", 0, "self", 1.0, 0, 2 + (int)(Math.random()*4), "");
         //TODO verify math.random
-        Move barrier = new Move("Barrier", true, 0, 100, psychic, "def", 2, "self", 1.0, 0, 1);
+        Move barrier = new Move("Barrier", true, 0, 100, psychic, "def", 2, "self", 1.0, 0, 1, "");
         Move bide;
         //TODO to be hardcoded;
-        Move bind;
+        Move bind = new Move("Bind", false, 15, 85, normal, "atk", 0, "self", 100, 0, 0, "bind");
         //TODO add status effects first!
 
 
